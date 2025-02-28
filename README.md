@@ -1,4 +1,4 @@
-#Primes Algorithm's comparison 
+# Primes Algorithm's comparison 
 
 
 Is it truly so crucial to write highly efficient code and implement optimized algorithms? To what extent can these two factors influence the execution and overall performance of a program?
