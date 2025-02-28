@@ -9,6 +9,7 @@ from primesAlgorithms import validate_input
 
 @validate_input
 def get_primes_lower_n(n: int) -> list[int]:
+    print(n, datetime.now(), 'v4')
     """
     this function iterates over all odd numbers and:
         - if the number is a multiple of a lower number, it will be skipped

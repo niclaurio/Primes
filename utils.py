@@ -49,8 +49,8 @@ def get_execution_times(
     with pool_executor as executor:
         futures = {
             executor.submit(get_function_execution_time, number, func): func
-            for number in range(start, stop, increment)
             for func in functions
+            for number in range(stop-increment, start-increment, -increment)
         }
 
         for future in as_completed(futures):

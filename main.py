@@ -7,7 +7,7 @@ PLOT_FOLDER = "plots"
 START = 10**5
 STOP = 10**6
 INCREMENT = 5 * 10**4
-MAX_WORKERS = 4
+MAX_WORKERS = 8
 
 
 if __name__ == "__main__":

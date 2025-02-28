@@ -9,6 +9,7 @@ from primesAlgorithms import validate_input
 
 @validate_input
 def get_primes_lower_n(n: int) -> list[int]:
+    print(n, datetime.now(), 'v1')
     return [el for el in range(2, n + 1) if is_prime(el)]
 
 

@@ -20,16 +20,23 @@ from primesAlgorithms import validate_input
 
 @validate_input
 def get_primes_lower_n(n: int) -> list[int]:
+    print(n, datetime.now(), 'v5')
     '''
     it creates a list of boolean and it sets to False all indexes corresponding to multiple numbers;
     returns: a list of integers corresponding to the indexes of each True value
     '''
 
     primes = [False, False] + [True] * (n - 1)
-    primes[4 : n + 1 : 2] = [False] * len(primes[4: n+1: 2])  # set to False multiples of 2
+    # set to False multiples of 2
+    for i in range(4, n+1, 2):
+        primes[i] = False
+    # primes[4 : n + 1 : 2] = [False] * len(primes[4: n+1: 2])
 
+    # set to False multiples of each prime number
     for el in range(3, isqrt(n) + 1, 2):
        if primes[el]:
-           primes[el**2 : n + 1 : el * 2] = [False] * len(primes[el**2 : n + 1 : el * 2]) # set to False multiples of each prime number
+           for i in range(el**2, n+1, el*2):
+               primes[i] = False
+           #primes[el**2 : n + 1 : el * 2] = [False] * len(primes[el**2 : n + 1 : el * 2])
 
     return [i for i, is_prime in enumerate(primes) if is_prime]

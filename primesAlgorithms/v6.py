@@ -13,6 +13,7 @@ from primesAlgorithms import validate_input
 
 @validate_input
 def get_primes_lower_n(n: int) -> np.ndarray:
+    print(n, datetime.now(), 'v6')
 
     primes = np.ones(n + 1, dtype=bool)
 
